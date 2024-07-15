@@ -5,7 +5,7 @@ const crypto = require("crypto");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const port = 9000;
+const port = 80;
 const cors = require("cors");
 app.use(cors());
 // app.use(cors({origin: true, credentials: true}));
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 const jwt = require("jsonwebtoken");
 app.listen(port, () => {
-  console.log("Server is running on port 9000");
+  console.log("Server is running on port 80");
 });
 mongoose
   .connect("mongodb+srv://tejhardikar:tejal@cluster0.6foi4zb.mongodb.net/", {
